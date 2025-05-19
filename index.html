@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BAZOOP Token ($ZOOP)</title>
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #1CFF45;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: all 0.2s ease;
+    }
+    .button:hover {
+      background-color: #0fb93a;
+    }
+    .countdown {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to BAZOOP Token ($ZOOP)</h1>
-  <p>This is the official page for the BAZOOP Token, created by Aletheia Labs.</p>
-  <ul>
-    <li><strong>Token Name:</strong> BAZOOP</li>
-    <li><strong>Symbol:</strong> $ZOOP</li>
-    <li><strong>Supply:</strong> 33,000,000,000</li>
-    <li><strong>Chain:</strong> Base (Chain ID 8453)</li>
-    <li><strong>Contract:</strong> 0xd6aa74b7d3c416a1fea5f84b8949409ac428708c</li>
-  </ul>
-  <p>View us  on <a href="https://basescan.org/address/0xd6aa74b7d3c416a1fea5f84b8949409ac428708c" target="_blank">BaseScan</a>.</p>
+  <img src="Bazoop Logo.png" alt="BAZOOP logo" width="180" />
+
+  <h1>BAZOOP Token ($ZOOP)</h1>
+  <p>The legendary meme coin that gives a ZOOP.</p>
+
+  <a href="BAZOOP WHITEPAPER v1.0.pdf" target="_blank" class="button">📄 View Whitepaper (v1.0)</a>
+
+  <div class="countdown">
+    🧠 Next DAO Charity Vote Begins In:
+    <div id="timer">Loading...</div>
+  </div>
+
+  <script>
+    const targetDate = new Date("2025-07-04T12:00:00Z").getTime();
+    const timerElement = document.getElementById("timer");
+
+    const countdown = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(countdown);
+        timerElement.innerHTML = "🚀 Voting is LIVE!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
