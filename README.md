@@ -1,13 +1,13 @@
 # 🛸 BAZOOP Token ($ZOOP)
 
-**The legendary meme coin that gives a ZOOP.**  
-Fueled by humor, driven by the community, and aligned with charitable purpose — BAZOOP is Base’s newest meme frontier.
+**The meme coin that gives a ZOOP.**  
+BAZOOP ($ZOOP) is not just a token — it's an interstellar cultural event. Engineered on the Base blockchain to go viral, enrich early holders, and beam real charity back to Earth.
 
 ---
 
-## 🔹 Token Details
+## 🔹 Token Overview
 
-- **Name:** BAZOOP
+- **Token Name:** BAZOOP
 - **Symbol:** $ZOOP
 - **Total Supply:** 33,000,000,000
 - **Decimals:** 18
@@ -18,54 +18,35 @@ Fueled by humor, driven by the community, and aligned with charitable purpose �
 
 ## 🔗 Quick Links
 
-- 🌐 [Official Website](https://aletheialabs.github.io/bazoop-token/)
-- 🛒 [Buy on Uniswap (Base)](https://app.uniswap.org/#/swap?outputCurrency=0xD6Aa74b7d3C416A1Fea5F84b8949409aC428708C&chain=base)
-- 📊 [Live Chart on DexScreener](https://dexscreener.com/base/0xd6aa74b7d3c416a1fea5f84b8949409ac428708c)
+- 🌐 [Website](https://aletheialabs.github.io/bazoop-token/)
 - 📘 [Whitepaper (v1.0)](https://aletheialabs.github.io/bazoop-token/whitepaper.pdf)
+- 🛒 [Buy on Uniswap (Base)](https://app.uniswap.org/#/swap?outputCurrency=0xD6Aa74b7d3C416A1Fea5F84b8949409aC428708C&chain=base)
+- 📊 [Chart on DexScreener](https://dexscreener.com/base/0xd6aa74b7d3c416a1fea5f84b8949409ac428708c)
 
 ---
 
-## 📜 Tokenomics
+## 📦 Tokenomics
 
-| Allocation       | %       | Purpose                                |
-|------------------|---------|----------------------------------------|
-| Liquidity        | ~15%    | Initial DEX pairing (Uniswap/BaseSwap) |
-| DAO Charity Fund | 5%      | Community-controlled donations         |
-| Founder Reserve  | 3.3%    | Project development & ops              |
-| Community/Events | 76.7%   | Airdrops, partnerships, future growth  |
-
----
-
-## 🧠 Monthly DAO Voting
-
-The $ZOOP DAO fund allows the community to vote monthly on verified nonprofit donations.  
-The **first vote begins in ~45 days**. Hold $ZOOP = have a say.
-
-> 🧬 1 ZOOP = 1 vote  
-> 🤝 Decentralized, transparent, verifiable via GitHub & BaseScan
+| Allocation         | Tokens             | %     |
+|--------------------|--------------------|-------|
+| Liquidity Pool     | 16,500,000,000     | 50%   |
+| Treasury           | 6,600,000,000      | 20%   |
+| Marketing          | 4,950,000,000      | 15%   |
+| Charity Wallet     | 3,300,000,000      | 10%   |
+| Founder Reserve    | 1,650,000,000      | 5%    |
 
 ---
 
-## 🔐 Liquidity Transparency
+## 🧠 Charity DAO Voting
 
-Current liquidity is on **Uniswap V3**, managed by deployer wallet `0x...8317`.
+Each month, the BAZOOP community votes on vetted nonprofits. The winning charity receives a donation directly from the Charity Wallet, tracked on-chain.
 
-> A BaseSwap (V2) liquidity pool and LP lock via Team Finance is being prepared for lock + public verification.
-
----
-
-## 📢 Socials
-
-- 🐦 [X (Twitter)](https://x.com/BaZoopToken)
-- 💬 [Telegram](https://t.me/BaZoopToken)
-- 📘 [Whitepaper](https://aletheialabs.github.io/bazoop-token/whitepaper.pdf)
+- ✅ Transparent: On-chain proof of donation
+- 🗳️ Decentralized: You vote, we beam it
+- 🚀 Simple: No red tape, just results
 
 ---
 
-## ⚠️ Disclaimer
+## 🛣️ Roadmap (Flight Plan)
 
-$ZOOP is a meme token with no guarantee of financial return. It exists for fun, satire, and to support community-directed charitable giving. This is not financial advice. DYOR.
-
----
-
-**Built by Aletheia Labs 🦉 | Powered by Memes. Directed by Truth.**
+**Q2**
