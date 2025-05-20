@@ -1,0 +1,26 @@
+{
+  "name": "Bazoop Token List",
+  "logoURI": "https://aletheialabs.github.io/bazoop-token/logo.png",
+  "keywords": [
+    "bazoop",
+    "zoop",
+    "memecoin",
+    "aletheialabs"
+  ],
+  "timestamp": "2025-05-20T21:49:10.566442Z",
+  "tokens": [
+    {
+      "chainId": 8453,
+      "address": "0xd6aa74b7d3c416a1fea5f84b8949409ac428708c",
+      "name": "Bazoop",
+      "symbol": "ZOOP",
+      "decimals": 9,
+      "logoURI": "https://aletheialabs.github.io/bazoop-token/logo.png"
+    }
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
