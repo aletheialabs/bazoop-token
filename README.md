@@ -49,4 +49,40 @@ Each month, the BAZOOP community votes on vetted nonprofits. The winning charity
 
 ## 🛣️ Roadmap (Flight Plan)
 
-**Q2**
+**Q2 2025**
+- ✅ Token deployed on Base
+- ✅ Website & whitepaper live
+
+**Q3 2025**
+- ⏳ DAO charity voting begins
+- ⏳ NFT drop + DAO tooling rollout
+
+**Q4 2025**
+- ⏳ Merch store launch
+- 🪐 Strategic partnerships & meme tool
+
+---
+
+## 🔐 Liquidity Status
+
+Initial liquidity is on **Uniswap V3**, managed by deployer wallet `0x...8317`.  
+A migration to **BaseSwap (V2)** with a **verifiable LP lock** on [Team Finance](https://team.finance) is planned.
+
+---
+
+## 🌐 Socials
+
+- 🐦 [X (Twitter)](https://x.com/BaZoopToken)
+- 💬 [Telegram](https://t.me/BaZoopToken)
+- 💻 [GitHub](https://github.com/aletheialabs/bazoop-token)
+
+---
+
+## ⚠️ Disclaimer
+
+BAZOOP ($ZOOP) is a meme token with no intrinsic value or expectation of financial return. It exists for entertainment, community engagement, and decentralized charity. Not financial advice. DYOR.
+
+---
+
+*Beam Wealth. Blast Charity. Meme Responsibly.*  
+**– Aletheia Labs 🦉**
