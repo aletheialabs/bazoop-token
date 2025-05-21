@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BAZOOP ($ZOOP)</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       background-color: #0a0a0a;
@@ -16,6 +16,9 @@
     h1 {
       font-size: 3rem;
       color: #fff;
+    }
+    h2 {
+      margin-top: 3rem;
     }
     p {
       font-size: 1.2rem;
@@ -45,31 +48,55 @@
       font-size: 1.5rem;
       text-decoration: none;
     }
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 600px;
-      border: none;
-      margin-top: 2rem;
+    canvas {
+      margin: 2rem auto;
+      max-width: 500px;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: small;
     }
   </style>
 </head>
 <body>
   <h1>BAZOOP ($ZOOP)</h1>
-  <p>The interstellar meme coin of the future — now live on <strong>Base</strong> and <strong>Solana</strong>.</p>
-  <p><strong>Base Supply:</strong> 33B<br><strong>Solana Supply:</strong> 1B<br><strong>Founder Wallet:</strong> 5% (locked)</p>
+  <p>The interstellar meme coin of the future — live on <strong>Base</strong> and <strong>Solana</strong>.</p>
+  <p><strong>Base Supply:</strong> 33B | <strong>Solana Supply:</strong> 1B | <strong>Founder Wallet:</strong> 5% (locked)</p><a class="button" href="https://dexscreener.com/base/0x4bb4f7c6ee0db9c21a1d093be92ae3ff50279ea0" target="_blank">DexScreener (Base)</a> <a class="button" href="https://dexscreener.com/solana/9ipnMxY12YBNR4bE76hE9sJGEbcEsGBbTJpP71XNmoon" target="_blank">DexScreener (Solana)</a> <a class="button" href="https://jup.ag/swap/SOL-ZOOP" target="_blank">Buy on Jupiter</a>
 
-  <a class="button" href="https://dexscreener.com/base/0x4bb4f7c6ee0db9c21a1d093be92ae3ff50279ea0" target="_blank">Chart on DexScreener (Base)</a>
-  <a class="button" href="https://dexscreener.com/solana/9ipnMxY12YBNR4bE76hE9sJGEbcEsGBbTJpP71XNmoon" target="_blank">Chart on DexScreener (Solana)</a>
-  <a class="button" href="https://jup.ag/swap/SOL-ZOOP" target="_blank">Buy on Solana (Jupiter)</a>
-
-  <div class="social-icons">
+  <h2>Tokenomics</h2>
+  <canvas id="tokenomicsChart"></canvas>
+  <script>
+    const ctx = document.getElementById('tokenomicsChart');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Liquidity Pool', 'Treasury', 'Marketing', 'Charity Wallet', 'Founder Reserve'],
+        datasets: [{
+          data: [50, 20, 15, 10, 5],
+          backgroundColor: ['#39ff14', '#66ff66', '#228822', '#117755', '#004422']
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: { color: '#00ff66' }
+          }
+        }
+      }
+    });
+  </script>  <h2>DAO-Governed Charity</h2>
+  <p>Each month, $ZOOP holders vote on where charity funds go — true decentralized impact.</p>
+  <a class="button" href="https://snapshot.org/#/" target="_blank">Vote on Snapshot</a>  <h2>Flight Path</h2>
+  <p>02.2025 – Launch on Base & Solana</p>
+  <p>03.2025 – DAO Voting + Airdrops</p>
+  <p>04.2025 – Staking & NFT Integration</p>
+  <p>06.2025 – CEX Listings + Charity Expansion</p>  <div class="social-icons">
     <a href="https://x.com/BazoopToken" target="_blank">X (Twitter)</a>
     <a href="https://t.me/BazoopToken" target="_blank">Telegram</a>
     <a href="https://github.com/aletheialabs/bazoop-token" target="_blank">GitHub</a>
     <a href="https://solscan.io/token/9ipnMxY12YBNR4bE76hE9sJGEbcEsGBbTJpP71XNmoon" target="_blank">Solscan</a>
-  </div>
-
-  <iframe src="https://aletheialabs.github.io/bazoop-token/BAZOOP%20WHITEPAPER%20v1.0.pdf"></iframe>
+  </div>  <p><a class="button" href="BAZOOP%20WHITEPAPER%20v1.0.pdf" target="_blank">Open White Paper (PDF)</a></p>  <footer>
+    <p>Built by Aletheia Labs | Follow us @BazoopToken</p>
+  </footer>
 </body>
 </html>
