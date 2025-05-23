@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,8 +128,6 @@
       display: inline-block;
       margin: 1rem 0.5rem;
       padding: 0.85rem 1.7rem;
-      background-color: #00ff99;
-      color: #000;
       font-size: 1rem;
       font-weight: bold;
       border-radius: 8px;
@@ -138,8 +135,28 @@
       box-shadow: 0 0 12px #00ff9944;
       transition: background 0.2s;
     }
-    .button:hover {
-      background-color: #13b071;
+    .button-base {
+      background-color: #0052FF;
+      color: #fff;
+    }
+    .button-base:hover {
+      background-color: #003ECC;
+    }
+    .button-uniswap {
+      background-color: #FF007A;
+      color: #fff;
+    }
+    .button-uniswap:hover {
+      background-color: #CC0063;
+    }
+    .button-whitepaper {
+      background-color: #fff;
+      color: #000;
+      border: 2px solid #000;
+      font-weight: bold;
+    }
+    .button-whitepaper:hover {
+      background-color: #f0f0f0;
     }
     .chart-section {
       display: flex;
@@ -205,12 +222,9 @@
     <span id="caAddress" class="ca-address">0xd6aa74b7d3c416a1fea5f84b8949409ac428708c</span>
     <button class="ca-copy" onclick="copyCA()">Copy</button>
   </div>
-
-  <a class="button" href="https://dexscreener.com/base/0x4bb9b3cfc81bbda1f381c23d8e33ab6f8f069ea0" target="_blank">Buy on DEX SCREENER</a>
-  <a class="button" href="https://app.uniswap.org/#/swap?outputCurrency=0xD6Aa74b7d3C416A1Fea5F84b8949409aC428708C&chain=base" target="_blank">Buy on Uniswap</a>
-  <a class="button" href="whitepaper.pdf" target="_blank">Whitepaper</a>
-
-  <section class="chart-section">
+  <a class="button button-base" href="https://dexscreener.com/base/0x4bb9b3cfc81bbda1f381c23d8e33ab6f8f069ea0" target="_blank">Buy on BaseSwap</a>
+  <a class="button button-uniswap" href="https://app.uniswap.org/#/swap?outputCurrency=0xD6Aa74b7d3C416A1Fea5F84b8949409aC428708C&chain=base" target="_blank">Buy on UniSwap</a>
+  <a class="button button-whitepaper" href="whitepaper.pdf" target="_blank">Whitepaper</a>  <section class="chart-section">
     <h2>Tokenomics</h2>
     <div class="pie-container">
       <canvas id="tokenomicsChart"></canvas>
@@ -225,49 +239,42 @@
       chartEl.height = width;
     }
     window.addEventListener('resize', resizePieChart);
-    resizePieChart();
-
-    const ctx = document.getElementById('tokenomicsChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Liquidity Pool', 'Treasury', 'Marketing', 'Charity Wallet', 'Founder Reserve'],
-        datasets: [{
-          data: [50, 20, 15, 10, 5],
-          backgroundColor: ['#39ff14', '#66ff66', '#228822', '#117755', '#004422']
-        }]
-      },
-      options: {
-        plugins: {
-          legend: {
-            labels: { color: '#00ff66', font: { size: 16 } }
-          }
-        }
+    resizePieChart();const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ['Liquidity Pool', 'Treasury', 'Marketing', 'Charity Wallet', 'Founder Reserve'],
+    datasets: [{
+      data: [50, 20, 15, 10, 5],
+      backgroundColor: ['#39ff14', '#66ff66', '#228822', '#117755', '#004422']
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+        labels: { color: '#00ff66', font: { size: 16 } }
       }
-    });
-
-    function copyCA() {
-      const ca = document.getElementById('caAddress').textContent;
-      navigator.clipboard.writeText(ca).then(function () {
-        const btn = document.querySelector('.ca-copy');
-        const orig = btn.textContent;
-        btn.textContent = 'Copied!';
-        setTimeout(() => { btn.textContent = orig; }, 1200);
-      });
     }
-  </script>
+  }
+});
 
-  <h2>DAO-Governed Charity</h2>
+function copyCA() {
+  const ca = document.getElementById('caAddress').textContent;
+  navigator.clipboard.writeText(ca).then(function () {
+    const btn = document.querySelector('.ca-copy');
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = orig; }, 1200);
+  });
+}
+
+  </script>  <h2>DAO-Governed Charity</h2>
   <p>Every month, $ZOOP holders vote on where charity funds go. True decentralized impact.</p>
-  <a class="button" href="https://snapshot.org/#/" target="_blank">Vote on Snapshot</a>
-
-  <h2>Flight Path</h2>
+  <a class="button" href="https://snapshot.org/#/" target="_blank">Vote on Snapshot</a>  <h2>Flight Path</h2>
   <p>02.2025 – Launch on Base</p>
   <p>03.2025 – DAO Voting + Airdrops</p>
   <p>04.2025 – Staking & NFT Integration</p>
-  <p>06.2025 – CEX Listings + Charity Expansion</p>
-
-  <div class="social-icons">
+  <p>06.2025 – CEX Listings + Charity Expansion</p>  <div class="social-icons">
     <a href="https://x.com/BaZoopToken" target="_blank">X (Twitter)</a>
     <a href="https://github.com/aletheialabs/bazoop-token" target="_blank">GitHub</a>
   </div>
