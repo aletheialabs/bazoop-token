@@ -15,15 +15,57 @@
       padding: 0;
       text-align: center;
     }
-    header {
-      margin-top: 2rem;
+    .top-bar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      gap: 10vw;
+    }
+    .alien-pic {
+      height: 320px;
+      max-height: 34vw;
+      max-width: 32vw;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 24px #00ff8860);
+      background: none;
+      border-radius: 24px;
+      margin: 0 2vw;
     }
     .main-logo {
       width: 180px;
       max-width: 70vw;
       margin-bottom: 0.5rem;
       border-radius: 24px;
-      box-shadow: 0 4px 24px #1118  ;
+      box-shadow: 0 4px 24px #1118;
+      z-index: 2;
+      background: none;
+    }
+    @media (max-width: 900px) {
+      .alien-pic {
+        height: 120px;
+        max-height: 25vw;
+        max-width: 25vw;
+      }
+      .top-bar {
+        gap: 3vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .top-bar {
+        gap: 1vw;
+      }
+      .alien-pic {
+        height: 58px;
+        max-height: 15vw;
+        max-width: 20vw;
+      }
+      .main-logo {
+        width: 100px;
+      }
     }
     .slogan {
       font-size: 1.25rem;
@@ -38,9 +80,50 @@
       text-shadow: 0 0 6px #00ff9966;
     }
     .tokenomics-info {
-      margin-bottom: 2rem;
+      margin-bottom: 0.9rem;
       font-size: 1.1rem;
       color: #aaffcc;
+    }
+    .ca-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    .ca-label {
+      font-weight: bold;
+      color: #fff;
+      margin-right: 0.4rem;
+    }
+    .ca-address {
+      background: #181f1c;
+      border-radius: 6px;
+      padding: 0.22rem 0.5rem;
+      color: #86ffd9;
+      font-family: monospace;
+      font-size: 1.03rem;
+      margin-right: 0.5rem;
+      letter-spacing: 0.03em;
+      user-select: all;
+      word-break: break-all;
+      max-width: 67vw;
+      overflow-x: auto;
+    }
+    .ca-copy {
+      padding: 0.13rem 0.7rem;
+      background: #00ff99;
+      border-radius: 6px;
+      border: none;
+      font-weight: bold;
+      color: #000;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .ca-copy:hover {
+      background: #13b071;
     }
     .button {
       display: inline-block;
@@ -105,19 +188,26 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="BAZOOP UFO Logo" class="main-logo">
-    <div class="slogan">Beam Wealth. Blast Charity. Meme Responsibly.</div>
-    <h1>BAZOOP ($ZOOP)</h1>
-    <div class="tokenomics-info">
-      <strong>Total Supply:</strong> 33,000,000,000 (Base)<br>
-      <strong>Founder Wallet:</strong> 5% (locked) &bull;
-      <strong>Tokenomics:</strong> LP 50% / Treasury 20% / Marketing 15% / Charity 10%
-    </div>
-    <a class="button" href="https://dexscreener.com/base/0x4bb9b3cfc81bbda1f381c23d8e33ab6f8f069ea0" target="_blank">Chart</a>
-    <a class="button" href="https://app.uniswap.org/#/swap?outputCurrency=0xD6Aa74b7d3C416A1Fea5F84b8949409aC428708C&chain=base" target="_blank">Buy $ZOOP</a>
-    <a class="button" href="whitepaper.pdf" target="_blank">Whitepaper</a>
-  </header>
+  <div class="top-bar">
+    <img src="GrnICGRW4AA4vz0.jpg" alt="Alien Mascot" class="alien-pic" />
+    <img src="logo.png" alt="BAZOOP UFO Logo" class="main-logo" />
+    <img src="GrnICGRW4AA4vz0.jpg" alt="Alien Mascot" class="alien-pic" />
+  </div>
+  <div class="slogan">Beam Wealth. Blast Charity. Meme Responsibly.</div>
+  <h1>BAZOOP ($ZOOP)</h1>
+  <div class="tokenomics-info">
+    <strong>Total Supply:</strong> 33,000,000,000 (Base)<br>
+    <strong>Founder Wallet:</strong> 5% (locked) &bull;
+    <strong>Tokenomics:</strong> LP 50% / Treasury 20% / Marketing 15% / Charity 10%
+  </div>
+  <div class="ca-section">
+    <span class="ca-label">Contract Address:</span>
+    <span id="caAddress" class="ca-address">0xd6aa74b7d3c416a1fea5f84b8949409ac428708c</span>
+    <button class="ca-copy" onclick="copyCA()">Copy</button>
+  </div>
+  <a class="button" href="https://dexscreener.com/base/0x4bb9b3cfc81bbda1f381c23d8e33ab6f8f069ea0" target="_blank">Chart</a>
+  <a class="button" href="https://app.uniswap.org/#/swap?outputCurrency=0xD6Aa74b7d3C416A1Fea5F84b8949409aC428708C&chain=base" target="_blank">Buy $ZOOP</a>
+  <a class="button" href="whitepaper.pdf" target="_blank">Whitepaper</a>
 
   <section class="chart-section">
     <h2>Tokenomics</h2>
@@ -155,6 +245,17 @@
         }
       }
     });
+
+    // Copy Contract Address Button
+    function copyCA() {
+      const ca = document.getElementById('caAddress').textContent;
+      navigator.clipboard.writeText(ca).then(function () {
+        const btn = document.querySelector('.ca-copy');
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = orig; }, 1200);
+      });
+    }
   </script>
 
   <h2>DAO-Governed Charity</h2>
