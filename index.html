@@ -3,85 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAZOOP ($ZOOP)</title>
+  <title>BAZOOP ($ZOOP) | Beam Wealth. Blast Charity. Meme Responsibly.</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      background-color: #0a0a0a;
-      color: #00ff99;
-      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at center, #0b1929 0%, #181c18 100%);
+      color: #a8ff60;
+      font-family: 'Orbitron', Arial, sans-serif;
       text-align: center;
-      padding: 2rem;
+      padding: 0 0 2rem 0;
+      margin: 0;
+    }
+    .logo {
+      width: 260px;
+      margin: 2.5rem auto 1rem auto;
+      display: block;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #fff;
+      letter-spacing: 2px;
+      margin-bottom: 0.3rem;
+      margin-top: 0.5rem;
     }
-    h2 {
-      margin-top: 3rem;
-    }
-    p {
+    .tagline {
+      color: #39ff14;
       font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1.5px;
     }
     .button {
       display: inline-block;
-      margin: 1rem;
+      margin: 0.7rem 0.5rem;
       padding: 1rem 2rem;
-      background-color: #00ff99;
-      color: #000;
+      background-color: #39ff14;
+      color: #0a0a0a;
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
       border-radius: 8px;
+      box-shadow: 0 2px 18px #39ff1466;
       transition: background 0.2s;
     }
     .button:hover {
-      background-color: #00cc77;
+      background-color: #1cf67a;
+      color: #333;
     }
     .social-icons {
-      margin-top: 2rem;
+      margin: 2rem 0 1rem 0;
+      font-size: 1.3rem;
     }
     .social-icons a {
-      margin: 0 1rem;
-      color: #00ff99;
-      font-size: 1.5rem;
+      margin: 0 1.5rem;
+      color: #fff;
       text-decoration: none;
+      font-weight: bold;
       transition: color 0.2s;
     }
     .social-icons a:hover {
+      color: #39ff14;
+    }
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+    .info {
+      margin: 1.2rem auto 2rem auto;
+      color: #fff;
+      background: #21293b77;
+      display: inline-block;
+      padding: 1.1rem 2.2rem;
+      border-radius: 1rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      box-shadow: 0 2px 18px #1624366b;
+    }
+    .tokenomics-table {
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 500px;
+      border-collapse: collapse;
+      font-size: 1rem;
+    }
+    .tokenomics-table th, .tokenomics-table td {
+      border: 1px solid #39ff14;
+      padding: 0.6rem 0.8rem;
+      background: #18252b;
+    }
+    .tokenomics-table th {
+      background: #222;
+      color: #39ff14;
+    }
+    .tokenomics-table td {
       color: #fff;
     }
+    .section {
+      margin-top: 3.2rem;
+      margin-bottom: 1.5rem;
+    }
     canvas {
-      margin: 2rem auto;
-      max-width: 500px;
-      background: #111;
-      border-radius: 1rem;
+      margin-top: 1.5rem;
+      max-width: 400px;
+      background: #0a1320;
+      border-radius: 2rem;
+      box-shadow: 0 2px 20px #0c2d2280;
+    }
+    .alien-img {
+      width: 150px;
+      margin: 2rem auto 0 auto;
+      border-radius: 50%;
+      border: 3px solid #39ff14;
+      box-shadow: 0 2px 24px #0f0;
+      display: block;
     }
     footer {
-      margin-top: 4rem;
-      font-size: small;
-      color: #44ffb0;
+      margin-top: 5rem;
+      padding-bottom: 2rem;
+      color: #a8ff60;
+      font-size: 0.9rem;
+      opacity: 0.7;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      .logo { width: 180px; }
       h1 { font-size: 2rem; }
-      .button { padding: 0.75rem 1.2rem; font-size: 0.95rem; }
-      canvas { max-width: 90vw; }
+      h2 { font-size: 1.4rem; }
+      .info { padding: 1rem 1rem; font-size: 0.95rem; }
+      .alien-img { width: 90px; }
     }
   </style>
 </head>
 <body>
+  <!-- Main UFO Logo -->
+  <img src="logo.png" alt="BAZOOP UFO Logo" class="logo" />
   <h1>BAZOOP ($ZOOP)</h1>
-  <p>The interstellar meme coin of the future — live on <strong>Base</strong> and <strong>Solana</strong>.</p>
-  <p><strong>Base Supply:</strong> 33B | <strong>Solana Supply:</strong> 1B | <strong>Founder Wallet:</strong> 5% (locked)</p>
-  <a class="button" href="https://dexscreener.com/base/0x4bb9b3cfc81bbda1f381c23d8e33ab6f8f069ea0" target="_blank">DexScreener (Base)</a>
-  <a class="button" href="https://dexscreener.com/solana/9ipnMxY12YBNR4bE76hE9sJGEbcEsGBbTJpP71XNmoon" target="_blank">DexScreener (Solana)</a>
-  <a class="button" href="https://jup.ag/tokens/8kfNv8FpfXpLvorQQKF6HBC5GPPVkpUjGSyYVSCLpump" target="_blank">Buy on Jupiter</a>
+  <div class="tagline">Beam Wealth. Blast Charity. Meme Responsibly.</div>
+  <div class="info">
+    <p>
+      The interstellar meme coin on <b>Base</b> — engineered to go viral, reward early holders, and beam real charity back to Earth. <br>
+      <b>Token Supply:</b> 33,000,000,000 &bull; <b>Chain:</b> Base (8453)
+    </p>
+    <p>
+      <b>Contract Address:</b>
+      <br>
+      <a href="https://basescan.org/address/0xd6aa74b7d3c416a1fea5f84b8949409ac428708c" style="color:#39ff14" target="_blank">
+        0xd6aa74b7d3c416a1fea5f84b8949409ac428708c
+      </a>
+    </p>
+  </div>
+  <a class="button" href="https://app.uniswap.org/#/swap?outputCurrency=0xd6aa74b7d3c416a1fea5f84b8949409ac428708c&chain=base" target="_blank">Buy on Uniswap (Base)</a>
+  <a class="button" href="https://dexscreener.com/base/0x4bb9b3cfc81bbda1f381c23d8e33ab6f8f069ea0" target="_blank">DexScreener Chart</a>
+  <a class="button" href="whitepaper.pdf" target="_blank">Read Whitepaper (PDF)</a>
 
-  <h2>Tokenomics</h2>
-  <canvas id="tokenomicsChart"></canvas>
+  <div class="social-icons">
+    <a href="https://x.com/BaZoopToken" target="_blank">X (Twitter)</a>
+    <a href="https://t.me/+OBFRK30XVKc3MDMx" target="_blank">Telegram</a>
+  </div>
+
+  <div class="section">
+    <h2>Tokenomics</h2>
+    <table class="tokenomics-table">
+      <tr><th>Allocation</th><th>Tokens</th><th>%</th></tr>
+      <tr><td>Liquidity Pool</td><td>16,500,000,000</td><td>50%</td></tr>
+      <tr><td>Treasury</td><td>6,600,000,000</td><td>20%</td></tr>
+      <tr><td>Marketing</td><td>4,950,000,000</td><td>15%</td></tr>
+      <tr><td>Charity Wallet</td><td>3,300,000,000</td><td>10%</td></tr>
+      <tr><td>Founder Reserve</td><td>1,650,000,000</td><td>5%</td></tr>
+    </table>
+    <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+  </div>
+
   <script>
     const ctx = document.getElementById('tokenomicsChart').getContext('2d');
     new Chart(ctx, {
@@ -90,39 +182,43 @@
         labels: ['Liquidity Pool', 'Treasury', 'Marketing', 'Charity Wallet', 'Founder Reserve'],
         datasets: [{
           data: [50, 20, 15, 10, 5],
-          backgroundColor: ['#39ff14', '#66ff66', '#228822', '#117755', '#004422']
+          backgroundColor: ['#39ff14', '#2ad672', '#16b979', '#005a42', '#00f79e'],
+          borderColor: '#222',
+          borderWidth: 2
         }]
       },
       options: {
         plugins: {
           legend: {
-            labels: { color: '#00ff66' }
+            labels: { color: '#39ff14', font: { size: 14 } }
           }
         }
       }
     });
   </script>
-  <h2>DAO-Governed Charity</h2>
-  <p>Each month, $ZOOP holders vote on where charity funds go — true decentralized impact.</p>
-  <a class="button" href="https://snapshot.org/#/" target="_blank">Vote on Snapshot</a>
 
-  <h2>Flight Path</h2>
-  <p>02.2025 – Launch on Base & Solana</p>
-  <p>03.2025 – DAO Voting + Airdrops</p>
-  <p>04.2025 – Staking & NFT Integration</p>
-  <p>06.2025 – CEX Listings + Charity Expansion</p>
-
-  <div class="social-icons">
-    <a href="https://x.com/BazoopToken" target="_blank">X (Twitter)</a>
-    <a href="https://t.me/+OBFRK30XVKc3MDMx" target="_blank">Telegram</a>
-    <a href="https://github.com/aletheialabs/bazoop-token" target="_blank">GitHub</a>
-    <a href="https://solscan.io/token/9ipnMxY12YBNR4bE76hE9sJGEbcEsGBbTJpP71XNmoon" target="_blank">Solscan</a>
+  <div class="section">
+    <h2>DAO-Governed Charity</h2>
+    <p>
+      Every month, $ZOOP holders vote where the charity funds go. True decentralized impact.<br>
+      <b>Charity wallet:</b> 10% of supply. <br>
+      <a class="button" href="https://snapshot.org/#/" target="_blank">Vote on Snapshot</a>
+    </p>
   </div>
-  <p>
-    <a class="button" href="whitepaper.pdf" target="_blank">Open White Paper (PDF)</a>
-  </p>
+
+  <div class="section">
+    <h2>Flight Path (Roadmap)</h2>
+    <ul style="list-style:none; color:#fff; font-size:1.12rem; padding-left:0;">
+      <li>Q2 2025: Token deployed on Base, website + whitepaper live</li>
+      <li>Q3 2025: DAO charity voting begins, NFT drop, DAO tooling</li>
+      <li>Q4 2025: Merch launch, partnerships, meme tool</li>
+    </ul>
+  </div>
+
+  <img src="GrnICGRW4AA4vz0.jpg" alt="ZOOP Alien Mascot" class="alien-img" />
+
   <footer>
-    <p>Built by Aletheia Labs | Follow us @BazoopToken</p>
+    <p>Built by Aletheia Labs | Beam Wealth. Blast Charity. Meme Responsibly.<br>Follow us <a href="https://x.com/BaZoopToken" style="color:#39ff14" target="_blank">@BaZoopToken</a></p>
   </footer>
 </body>
 </html>
