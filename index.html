@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BAZOOP ($ZOOP) – The Meme Coin That Gives a ZOOP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
@@ -14,26 +15,26 @@
       padding: 0;
       text-align: center;
     }
+
+    .alien-bg {
+      position: fixed;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%) scale(1.5);
+      opacity: 0.12;
+      z-index: -1;
+      width: 400px;
+      max-width: 90vw;
+      pointer-events: none;
+      user-select: none;
+    }
+
     .top-bar {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
       width: 100%;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
-      gap: 10vw;
     }
-    .alien-pic {
-      height: 220px;
-      max-height: 27.2vw;
-      max-width: 25.6vw;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 0 24px #00ff8860);
-      background: none;
-      border-radius: 24px;
-      margin: 0 2vw;
-    }
+
     .main-logo {
       width: 280px;
       max-width: 70vw;
@@ -43,46 +44,39 @@
       z-index: 2;
       background: none;
     }
+
     @media (max-width: 900px) {
-      .alien-pic {
-        height: 120px;
-        max-height: 25vw;
-        max-width: 25vw;
-      }
-      .top-bar {
-        gap: 3vw;
-      }
-    }
-    @media (max-width: 600px) {
-      .top-bar {
-        gap: 1vw;
-      }
-      .alien-pic {
-        height: 125px;
-        max-height: 30vw;
-        max-width: 40vw;
-      }
       .main-logo {
-        width: 100px;
+        width: 200px;
       }
     }
+
+    @media (max-width: 600px) {
+      .main-logo {
+        width: 120px;
+      }
+    }
+
     .slogan {
       font-size: 1.25rem;
       margin-bottom: 0.75rem;
       color: #39ff14;
       letter-spacing: 1px;
     }
+
     h1 {
       font-size: 2.6rem;
       margin-bottom: 0.5rem;
       color: #fff;
       text-shadow: 0 0 6px #00ff9966;
     }
+
     .tokenomics-info {
       margin-bottom: 0.9rem;
       font-size: 1.1rem;
       color: #39ff14;
     }
+
     .ca-section {
       display: flex;
       align-items: center;
@@ -91,11 +85,13 @@
       font-size: 1rem;
       flex-wrap: wrap;
     }
+
     .ca-label {
       font-weight: bold;
       color: #fff;
       margin-right: 0.4rem;
     }
+
     .ca-address {
       background: #181f1c;
       border-radius: 6px;
@@ -110,6 +106,7 @@
       max-width: 67vw;
       overflow-x: auto;
     }
+
     .ca-copy {
       padding: 0.13rem 0.7rem;
       background: #39ff14;
@@ -121,9 +118,11 @@
       cursor: pointer;
       transition: background 0.2s;
     }
+
     .ca-copy:hover {
       background: #13b071;
     }
+
     .button {
       display: inline-block;
       margin: 1rem 0.5rem;
@@ -135,29 +134,36 @@
       box-shadow: 0 0 12px #00ff9944;
       transition: background 0.2s;
     }
+
     .button-base {
       background-color: #0052FF;
       color: #fff;
     }
+
     .button-base:hover {
       background-color: #003ECC;
     }
+
     .button-uniswap {
       background-color: #FF007A;
       color: #fff;
     }
+
     .button-uniswap:hover {
       background-color: #CC0063;
     }
+
     .button-whitepaper {
       background-color: #fff;
       color: #000;
       border: 2px solid #000;
       font-weight: bold;
     }
+
     .button-whitepaper:hover {
       background-color: #f0f0f0;
     }
+
     .chart-section {
       display: flex;
       flex-direction: column;
@@ -165,6 +171,7 @@
       justify-content: center;
       margin: 2.2rem 0 1.2rem 0;
     }
+
     .pie-container {
       width: 100%;
       max-width: 350px;
@@ -174,6 +181,7 @@
       box-shadow: 0 0 24px #00ff9950;
       padding: 1rem 0.5rem;
     }
+
     @media (min-width: 700px) {
       .pie-container {
         max-width: 400px;
@@ -182,20 +190,24 @@
         width: 220px;
       }
     }
+
     h2 {
       color: #6fffb0;
       margin-top: 2.5rem;
       margin-bottom: 1rem;
     }
+
     .social-icons {
       margin: 2.2rem 0 1.2rem 0;
     }
+
     .social-icons a {
       margin: 0 0.9rem;
       color: #00ff99;
       font-size: 1.2rem;
       text-decoration: underline;
     }
+
     footer {
       margin: 3.5rem 0 0 0;
       font-size: 0.9rem;
@@ -205,31 +217,36 @@
   </style>
 </head>
 <body>
- <div class="top-bar">
-  <img src="AlienBoss.png" alt="Alien Mascot" class="alien-pic" />
-  <img src="logo.png" alt="BAZOOP UFO Logo" class="main-logo" />
-  <img src="AlienBoss.png" alt="Alien Mascot" class="alien-pic" />
-</div>
+  <img src="AlienBoss.png" alt="Alien Background" class="alien-bg" />
+  <div class="top-bar">
+    <img src="logo.png" alt="BAZOOP UFO Logo" class="main-logo" />
+  </div>
+
   <div class="slogan">Beam Wealth. Blast Charity. Meme Responsibly.</div>
   <h1>BAZOOP ($ZOOP)</h1>
   <div class="tokenomics-info">
-    <strong>Total Supply:</strong> 33,000,000,000 (Base)<br>
+    <strong>Total Supply:</strong> 33,000,000,000 (Base)<br />
     <strong>Founder Wallet:</strong> 5% (locked) &bull;
     <strong>Tokenomics:</strong> LP 50% / Treasury 20% / Marketing 15% / Charity 10%
   </div>
+
   <div class="ca-section">
     <span class="ca-label">Contract Address:</span>
     <span id="caAddress" class="ca-address">0xd6aa74b7d3c416a1fea5f84b8949409ac428708c</span>
     <button class="ca-copy" onclick="copyCA()">Copy</button>
   </div>
+
   <a class="button button-base" href="https://dexscreener.com/base/0xad158e0ee48eaff0b2fdf09b837a5745437415e3" target="_blank">Buy/Swap ZOOP/WETH on DexScreener</a>
   <a class="button button-uniswap" href="https://app.uniswap.org/#/swap?outputCurrency=0xD6Aa74b7d3C416A1Fea5F84b8949409aC428708C&chain=base" target="_blank">Buy/Swap on UniSwap</a>
-  <a class="button button-whitepaper" href="whitepaper.pdf" target="_blank">Whitepaper</a>  <section class="chart-section">
+  <a class="button button-whitepaper" href="whitepaper.pdf" target="_blank">Whitepaper</a>
+
+  <section class="chart-section">
     <h2>Tokenomics</h2>
     <div class="pie-container">
       <canvas id="tokenomicsChart"></canvas>
     </div>
   </section>
+
   <script>
     function resizePieChart() {
       const chartEl = document.getElementById('tokenomicsChart');
@@ -238,48 +255,57 @@
       chartEl.width = width;
       chartEl.height = width;
     }
+
     window.addEventListener('resize', resizePieChart);
-    resizePieChart();const ctx = document.getElementById('tokenomicsChart').getContext('2d');
-new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ['Liquidity Pool', 'Treasury', 'Marketing', 'Charity Wallet', 'Founder Reserve'],
-    datasets: [{
-      data: [50, 20, 15, 10, 5],
-      backgroundColor: ['#39ff14', '#66ff66', '#228822', '#117755', '#004422']
-    }]
-  },
-  options: {
-    plugins: {
-      legend: {
-        labels: { color: '#00ff66', font: { size: 16 } }
+    resizePieChart();
+
+    const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Liquidity Pool', 'Treasury', 'Marketing', 'Charity Wallet', 'Founder Reserve'],
+        datasets: [{
+          data: [50, 20, 15, 10, 5],
+          backgroundColor: ['#39ff14', '#66ff66', '#228822', '#117755', '#004422']
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: { color: '#00ff66', font: { size: 16 } }
+          }
+        }
       }
+    });
+
+    function copyCA() {
+      const ca = document.getElementById('caAddress').textContent;
+      navigator.clipboard.writeText(ca).then(function () {
+        const btn = document.querySelector('.ca-copy');
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = orig; }, 1200);
+      });
     }
-  }
-});
+  </script>
 
-function copyCA() {
-  const ca = document.getElementById('caAddress').textContent;
-  navigator.clipboard.writeText(ca).then(function () {
-    const btn = document.querySelector('.ca-copy');
-    const orig = btn.textContent;
-    btn.textContent = 'Copied!';
-    setTimeout(() => { btn.textContent = orig; }, 1200);
-  });
-}
-
-  </script>  <h2>DAO-Governed Charity</h2>
+  <h2>DAO-Governed Charity</h2>
   <p>Every month, $ZOOP holders vote on where charity funds go. True decentralized impact.</p>
-  <a class="button" href="https://snapshot.org/#/" target="_blank">Vote on Snapshot</a>  <h2>Flight Path</h2>
+  <a class="button" href="https://snapshot.org/#/" target="_blank">Vote on Snapshot</a>
+
+  <h2>Flight Path</h2>
   <p>02.2025 – Launch on Base</p>
   <p>03.2025 – DAO Voting + Airdrops</p>
   <p>04.2025 – Staking & NFT Integration</p>
-  <p>06.2025 – CEX Listings + Charity Expansion</p>  <div class="social-icons">
-  <a href="https://x.com/BaZoopToken" target="_blank">X (Twitter)</a>
-  <a href="https://github.com/aletheialabs/bazoop-token" target="_blank">GitHub</a>
-  <a href="https://t.me/+restaV69PoZhM2Mx" target="_blank">Telegram</a>
-  <a href="https://discord.gg/NGQVYhGh" target="_blank">Discord</a>
-</div>
+  <p>06.2025 – CEX Listings + Charity Expansion</p>
+
+  <div class="social-icons">
+    <a href="https://x.com/BaZoopToken" target="_blank">X (Twitter)</a>
+    <a href="https://github.com/aletheialabs/bazoop-token" target="_blank">GitHub</a>
+    <a href="https://t.me/+restaV69PoZhM2Mx" target="_blank">Telegram</a>
+    <a href="https://discord.gg/NGQVVYhGh" target="_blank">Discord</a>
+  </div>
+
   <footer>
     Built by Aletheia Labs | Follow us @BazoopToken
   </footer>
