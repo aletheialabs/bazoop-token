@@ -29,7 +29,7 @@ BAZOOP (\$ZOOP) isn’t just a token — it’s an interstellar cultural event. 
 
 | Allocation          | Tokens             | %         | Status                           |
 | ------------------- | ------------------ | --------- | -------------------------------- |
-| Liquidity Pool      | 16,500,000,000     | 50%       | Live                             |
+| Liquidity Pool      | 16,500,000,000     | 50%       | Locked                           |
 | Treasury            | 6,600,000,000      | 20%       | Holding wallet                   |
 | Marketing           | 4,950,000,000      | 15%       | Holding wallet                   |
 | Charity Wallet      | 3,300,000,000      | 10%       | Holding wallet                   |
